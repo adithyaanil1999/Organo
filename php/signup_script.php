@@ -7,8 +7,6 @@
     {
         $username=$_POST['username'];
         $password=md5($_POST['password']);
-
-
         $query="SELECT username FROM login_table where username='$username';";
         $result=mysqli_query($link,$query);
         if($result)

@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+	padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body,html
+{
+    height: 100%;
+}
+a
+{
+    text-decoration: none;
+}
+/*NAVBAR */
+.nav a
+{
+    height: 50px;
+	border-right: 2px solid #00FF41;
+	background-color: #00938A;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	font-family: 'Arvo', serif;
+    font-size: 2vh;
+    transition: background-color 500ms;
+    color: #5EC277;
+} 
+
+.nav a:hover
+{
+    background-color: #1E6072;
+}
+
+.nav ul
+{
+    display: flex;
+    list-style: none;
+
+}
+
+.nav ul li
+{
+    position: relative;
+    width: 100%;
+}
+
+.nav li:hover .dropdown-1 > li
+{
+    top: 0;
+    display: block;
+}
+
+.dropdown-1 li
+{
+    display: none;
+    position: relative;
+}
+
+.dropdown-1
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inactive
+{
+   pointer-events: none;
+   cursor: default;
+}
+
+@media only screen and (max-width: 1028px){
+
+    .dropdown-1 li>a
+    {
+        font-size: 3vw;
+    }
+
+}
+
+/* END OF NAV BAR */
