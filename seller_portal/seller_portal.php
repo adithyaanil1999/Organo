@@ -15,9 +15,9 @@
 <body>
     <div class="nav">
         <ul class="navbar-container">
-            <li><a href=""><i class="fas fa-seedling"></i> Home</a></li>
-            <li><a href=""><i class="fas fa-carrot"></i> My Items</a></li>
-            <li><a class="inactive" href=""><i class="fas fa-user"></i><?php echo " ".$username ?> <i class="fas fa-chevron-down"></i></a>
+            <li><a href=""><i class="fas fa-seedling"></i>&nbsp Home</a></li>
+            <li><a href=""><i class="fas fa-carrot"></i>&nbsp My Items</a></li>
+            <li><a class="inactive" href=""><i class="fas fa-user"></i>&nbsp <?php echo " ".$username ?> &nbsp <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-1">
                     <li><a href="">My Wallet</a></li>
                     <li><a href="">Change My Details</a></li>
@@ -28,8 +28,7 @@
         </ul>
     </div>
     <div class="main-container">
+
     </div>
 </body>
 </html>
-
-<!-- id="dropdown_wrapper" -->
