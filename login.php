@@ -1,6 +1,6 @@
 <?php   
     session_start();
-    include('php/login_script.php')
+    include('php/login_script.php');
 ?>
 <!DOCTYPE html>
 <html>

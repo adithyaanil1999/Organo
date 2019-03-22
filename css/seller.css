@@ -71,7 +71,7 @@ a
     display: flex;
     flex-direction: column;
     width: 100%;
-}
+} Log
 
 .inactive
 {
@@ -92,7 +92,66 @@ a
 
 .main-container
 {
-    background: #4A6A71;
+    background: #9CB0A4;
     width: 100%;
     height: calc(100% - 6vh);
+}
+.Choice-banner
+{
+    display: table;
+    width: 100%;
+    height: 8%;
+    position: relative;
+    text-align: center;
+    font-family: 'Arvo', serif;
+	/* font-size: 3vw; */
+    /* background: green; */
+}
+.Choice-banner h1
+{
+    display: table-cell;
+    position: relative;
+    top: 50%;
+    color: #386C5F;
+    vertical-align: center;
+}
+.Choice-containter
+{
+    height: 92%;
+    width: 100%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Choice-Fruit
+{
+    display: flex;
+    background: tan;
+    width: 50%;
+    height: 100%;
+}
+
+.Choice-Vegetable
+{
+    display: flex;
+    background: blueviolet;
+    width: 50%;
+    height: 100%;
+
+
+}
+
+@media only screen and (max-width: 1028px){
+
+    .dropdown-1 li>a
+    {
+        font-size: 3vw;
+    }
+
+    .Choice-banner h1
+    {
+        font-size: 3vw;
+    }
 }
