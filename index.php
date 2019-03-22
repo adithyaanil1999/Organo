@@ -30,7 +30,7 @@
 					<div id="user_type">
 						<div id="user_buyer">
 							<div class="pic">
-								<a href="login.php"><img src="img/buyer.png"></a>
+								<a href="buyer_portal/buyer_portal.php"><img src="img/buyer.png"></a>
 							</div>
 							<div class="about_pic">
 								<p>Buy</p>
@@ -38,7 +38,7 @@
 						</div>
 						<div id="user_seller">
 							<div class="pic"  >	
-								<a href="seller_portal/seller_portal.php"><img src="img/seller.png"></a>
+								<a href="login.php"><img src="img/seller.png"></a>
 							</div>
 							<div class="about_pic">
 								<p>Sell</p>

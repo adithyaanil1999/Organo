@@ -10,17 +10,36 @@ body,html
     height: 100%;
     width: 100%;
 }
-
+img
+{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+	border-radius: 100px;
+}
 a
 {
     text-decoration: none;
 }
-
+@keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
 ::-webkit-scrollbar {
     display: none;
 	
 }
 /*NAVBAR */
+.nav
+{
+    position: relative;
+    z-index: 2;
+}
 .nav a
 {
     height: 6vh;
@@ -92,6 +111,8 @@ a
 
 .main-container
 {
+    position: relative;
+    z-index: 1;
     background: #9CB0A4;
     width: 100%;
     height: calc(100% - 6vh);
@@ -104,42 +125,106 @@ a
     position: relative;
     text-align: center;
     font-family: 'Arvo', serif;
-	/* font-size: 3vw; */
-    /* background: green; */
+
 }
-.Choice-banner h1
+.Choice-banner p
 {
     display: table-cell;
     position: relative;
     top: 50%;
     color: #386C5F;
+    transition: opacity .5s ease-in-out;
     vertical-align: center;
+    font-size: 3vw;
 }
 .Choice-containter
 {
     height: 92%;
     width: 100%;
-    background: red;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 0.5s ease-in;
 }
 
-.Choice-Fruit
+
+.Choice 
 {
     display: flex;
-    background: tan;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 50%;
     height: 100%;
+    align-items: center;
+}
+.pic 
+{
+    display: flex;
+    height: 130px;
+    width: 130px;
+    cursor: pointer;
+    background: #00938A;
+    border-radius: 100px;
+	transition: all 0.5s;
+}
+.pic:hover
+{
+	
+	height: 150px;
+	width: 150px;
+	align-self: center;
+	transition: all 0.5s;
+
+}
+.about_pic
+{
+    display: flex;
+    width: 30%;
+    height: 10%;
+    font-size: 2vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arvo', serif;
+    color:#386C5F;
 }
 
-.Choice-Vegetable
+.Fruit-container
+{
+    height: 92%;
+    width: 100%;
+    display: flex;
+    animation: fadeIn 0.5s ease-in;
+}
+.Veg-container
+{
+    height: 92%;
+    width: 100%;
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+.back-btn
 {
     display: flex;
-    background: blueviolet;
-    width: 50%;
-    height: 100%;
+    margin-left: calc(100% - 115px);
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    /* animation: fadeIn 0.5s ease-in; */
+    font-family: 'Arvo', serif;
+    font-size: 2vh;
+    color: #386C5F;
+    cursor: pointer;
+    z-index: 3;
+    border: 2px solid #00FF41;
+    border-radius: 5px;
+}
 
+.back-btn:hover
+{
+	background-color: #00938A;
 
 }
 
@@ -154,4 +239,10 @@ a
     {
         font-size: 3vw;
     }
+
+    .about_pic
+    {
+        font-size: 6vw;
+    }
+
 }
