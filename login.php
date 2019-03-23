@@ -13,7 +13,9 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body> <div class="nav"> <ul class="navbar-container" id="navbar">
+<body> 
+    <div class="nav"> 
+        <ul class="navbar-container" id="navbar">
             <li class="icon main"><a href="index.php"><i class="fas fa-seedling"></i> Home</a></li>
         </ul>
     </div>
@@ -44,3 +46,4 @@
         </div>
     </div>
 </body>
+</html>

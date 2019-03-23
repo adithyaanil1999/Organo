@@ -11,8 +11,9 @@
         $state=$_POST['state'];
         $district=$_POST['district'];
         $account_type=$_POST['type'];
+        $street = $_POST['street'];
 
-        $query="INSERT INTO user_table(user_type,login_id,user_name,user_email,user_age,user_state,user_district) VALUES('$account_type','$login_id','$name','$email','$age','$state','$district');";
+        $query="INSERT INTO user_table(user_type,login_id,user_name,user_email,user_age,user_street,user_state,user_district) VALUES('$account_type','$login_id','$name','$email','$age','$street','$state','$district');";
         $result=mysqli_query($link,$query);
         if($result)
         {

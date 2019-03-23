@@ -38,9 +38,11 @@
                 <p>Enter your Name:</p>
                 <input class="reg-field" name="name" type="text" placeholder="Name">
                 <p>Enter your Age</p>
-                <input class="reg-field" name="age" id="password" type="text" placeholder="age">
+                <input class="reg-field" name="age" id="password" type="number" placeholder="age">
                 <p>Enter your Email:</p>
                 <input class="reg-field" name="email" type="email" placeholder="Email">
+                <p>Enter your Street:</p>
+                <input class="reg-field" name="street" type="text" placeholder="Street">
                 <p>Select your State:</p>
                 <select class="choices" name="state" id="listBox" onchange='selct_district(this.value)'></select>
                 <p>Select your District:</p>

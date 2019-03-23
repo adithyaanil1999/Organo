@@ -12,15 +12,12 @@ function load_veg() {
     banner.innerText='Select the Vegetable you want to sell';
     banner.style.opacity = 1;
     },500);
-    
-
 }
 
 function load_fruit() {
     let choice_container = document.getElementById('choice-wrapper');
     let fruit_container = document.getElementById('fruit-wrapper');
     let banner = document.getElementById('top-banner');
-    
     choice_container.style.display = 'none';
     fruit_container.style.display = 'flex';
 
@@ -29,7 +26,6 @@ function load_fruit() {
     banner.innerText='Select the fruit you want to sell';
     banner.style.opacity = 1;
     },500);
-
 }
 
 
@@ -60,6 +56,7 @@ function back(arg,arg1) {
         }
         suggestedamount.innerHTML='';
         ajax_msg.innerHTML='';
+        
     }
     else if(arg === 'veg' && arg1 === 'item'){
         item_price.style.display = 'none';
@@ -70,6 +67,7 @@ function back(arg,arg1) {
         }
         suggestedamount.innerHTML='';
         ajax_msg.innerHTML='';
+        
     }
 
     banner.style.opacity = 0;
@@ -77,6 +75,8 @@ function back(arg,arg1) {
     banner.innerText='What would you like to sell?';
     banner.style.opacity = 1;
     },500);
+
+    
 }
 
 function input_item(arg1,arg2){

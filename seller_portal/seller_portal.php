@@ -19,7 +19,7 @@
     <div class="nav">
         <ul class="navbar-container">
             <li><a href="seller_portal.php"><i class="fas fa-seedling"></i>&nbsp Home</a></li>
-            <li><a href=""><i class="fas fa-carrot"></i>&nbsp My Items</a></li>
+            <li><a href="my_items.php"><i class="fas fa-carrot"></i>&nbsp My Items</a></li>
             <li><a class="inactive" href=""><i class="fas fa-user"></i>&nbsp <?php echo " " . $username ?> &nbsp <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-1">
                     <li><a href="">My Wallet</a></li>
@@ -55,19 +55,19 @@
         <div class="Fruit-container" id="fruit-wrapper">
             <div class="items">
                 <div class="item">
-                    <div class='item-pic' onclick="input_item('orange','fruit')">
-                        <img src="../img/orange.png">
+                    <div class='item-pic' onclick="input_item('guava','fruit')">
+                        <img src="../img/guava.png">
                     </div>
                     <div class='item-desc'>
-                        Orange
+                        Guava
                     </div>
                 </div>
                 <div class="item">
-                    <div class='item-pic' onclick="input_item('mango','fruit')">
-                        <img src="../img/mango.png">
+                    <div class='item-pic' onclick="input_item('pomegranate','fruit')">
+                        <img src="../img/pomegranate.png">
                     </div>
                     <div class='item-desc'>
-                        Mango
+                        Pomegranate
                     </div>
                 </div>
                 <div class="item">
@@ -79,11 +79,11 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class='item-pic' onclick="input_item('watermelon','fruit')">
-                        <img src="../img/watermelon.png">
+                    <div class='item-pic' onclick="input_item('pineapple','fruit')">
+                        <img src="../img/pineapple.png">
                     </div>
                     <div class='item-desc'>
-                        Watermelon
+                        Pineapple
                     </div>
                 </div>
                 <div class="item" onclick="input_item('apple','fruit')">
@@ -98,7 +98,49 @@
             </div>
         </div>
         <div class="Veg-container" id="veg-wrapper">
-            <button class="back-btn" onclick="back('veg','none')">back</button>
+        <div class="items">
+            <div class="item">
+                    <div class='item-pic' onclick="input_item('cabbage','veg')">
+                        <img src="../img/cabbage.png">
+                    </div>
+                    <div class='item-desc'>
+                        Cabbage
+                    </div>
+                </div>
+                <div class="item">
+                    <div class='item-pic' onclick="input_item('carrot','veg')">
+                        <img src="../img/carrot.png">
+                    </div>
+                    <div class='item-desc'>
+                        Carrot
+                    </div>
+                </div>
+                <div class="item">
+                    <div class='item-pic' onclick="input_item('radish','veg')">
+                        <img src="../img/radish.png">
+                    </div>
+                    <div class='item-desc'>
+                        Radish
+                    </div>
+                </div>
+                <div class="item">
+                    <div class='item-pic' onclick="input_item('beans','veg')">
+                        <img src="../img/beans.png">
+                    </div>
+                    <div class='item-desc'>
+                        Beans
+                    </div>
+                </div>
+                <div class="item" onclick="input_item('Tomato','veg')">
+                    <div class='item-pic'>
+                        <img src="../img/tomato.png">
+                    </div>
+                    <div class='item-desc'>
+                        Tomato
+                    </div>
+                </div>
+                <button class="back-btn" onclick="back('veg','none')">back</button>
+            </div>
         </div>
 
         <div class="itemprice-container" id="item_price">
@@ -112,9 +154,9 @@
                 <p id="error"></p>
                 <span id="suggested-price"></span>
                 <button id="REG_button">SUBMIT</button>
-                <span id="ajax-msg"> </span>
+                <span id="ajax-msg"></span>
             </form>
-            <button class="back-btn" onclick="back('fruit','item')">back</button>
+            <button class="back-btn" onclick="window.location.reload()">back</button>
         </div>
     </div>
 </body>

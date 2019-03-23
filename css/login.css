@@ -32,7 +32,7 @@ img
 /*RESPOSIVE NAV BAR */
 .navbar-container
 {
-    min-height: 3vw;
+    height: 3vw;
 	width: 100%;
 	background-color: #00938A;
 	display: flex;
@@ -216,7 +216,7 @@ img
 {
 	animation: fadeIn 0.8s ease-in;
     display: flex;
-    height: 70%;
+    height: 77%;
     width: 30vw;
     
     background: #3A4B40;
