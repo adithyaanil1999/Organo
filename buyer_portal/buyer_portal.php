@@ -40,7 +40,7 @@
     <div class="nav">
         <ul class="navbar-container" id='ad'>
             <li><a href="buyer_portal.php"><i class="fas fa-seedling"></i>&nbsp Home</a></li>
-            <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></i>&nbsp Cart</a></li>
+            <li><a id="cart-btn" href="cart.php"><i class="fas fa-shopping-cart"></i></i>&nbsp Cart</a></li>
             <li><a class="inactive" href=""><i class="fas fa-user"></i>&nbsp <?php echo " " . $username ?> &nbsp <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-1">
                     <li id="details-btn"><a href="../change_details.php">Change My Details</a></li>
@@ -173,8 +173,10 @@ if(guest_session===true)
 {
     var details_change = document.getElementById('details-btn');
     var password_change = document.getElementById('password-btn');
+    var cart = document.getElementById('cart-btn');
     details_change.style.display = 'none';
     password_change.style.display = 'none';
+    cart.href='../login.php';
     console.log('Guest Session Initalised');
 }
 </script>

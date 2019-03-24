@@ -239,7 +239,11 @@ img
     background: teal;
     transition: background 0.2s ease-in;
 }
-
+.id
+{
+	flex-grow: 0;
+	max-width: 50px
+}
 
 .header-text:hover{
     background: #1E6072;
@@ -327,4 +331,14 @@ p
     transition: opacity .5s ease-in-out;
     vertical-align: center;
     font-size: 1.2vw;
+}
+.reg-field
+{
+	padding: 4px;
+	width: 100%;
+    background-color:#00938A;
+    color: #00FF26;
+	font-family: 'Arvo', serif;
+	margin: 10px;
+	border: none;
 }

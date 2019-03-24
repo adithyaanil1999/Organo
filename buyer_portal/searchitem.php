@@ -19,7 +19,6 @@
             $username=$_SESSION['username'];
             $product_id = $_POST['button'];
             $query = "INSERT INTO cart(product_id,user_id) values('$product_id','$username');";
-            // echo $query;
             $result2 = mysqli_query($link, $query);
             if (!$result2 && mysqli_errno($link)!=1062) 
             {
@@ -100,8 +99,8 @@
 
         <?php
 
-    }
-?>
+             }
+        ?>
 
     </div>
 </body>
