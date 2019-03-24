@@ -196,7 +196,7 @@ img
 
 .main-container
 {
-    height: calc(100% - 3vw);
+    min-height: calc(100% - 3vw);
     width: 100%;
     background: #9CB0A4;
     overflow-y: scroll;
@@ -229,7 +229,8 @@ img
 
 .header-text {
     
-    flex-grow: 1;     
+    flex-grow: 1;
+    flex-basis: 0;    
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -245,7 +246,9 @@ img
 }
 
 .text{
-    flex-grow: 1;     
+    flex-grow: 1;
+    flex-basis: 0;
+    /* width: 17%;  */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -253,6 +256,7 @@ img
     text-align: center;
     background: #5EC58A;
     color: #1E6072;
+    font-size: 1vw;
     transition: background 0.2s ease-in;
 }
 
@@ -270,8 +274,8 @@ img
 .btn-wrapper
 {
     display: flex;
-    flex-grow: 1; 
-    flex-grow: 1;     
+    flex-grow: 1;
+    flex-basis: 0;     
     justify-content: center;
     align-items: center;
     overflow: hidden;

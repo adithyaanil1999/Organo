@@ -323,57 +323,7 @@ input[type=number]::-webkit-inner-spin-button {
     animation: fadeIn2 1s ease-in;
 }
 
-#form_id
-{
-	width: 30%;
-	height: 50%;
-    display: flex;
-    background: #3A4B40;
-	flex-direction: column;
-	margin-top: 20px;
-    justify-content: center;
-    align-items: center;
-    color: #00FF26;
-    font-family: 'Arvo', serif;
-    animation: fadeIn 1s ease-in-out;
-    
-}
-::placeholder
-{
-    color: rgb(78, 105, 82);
-    font-family: 'Arvo', serif;
 
-}
-
-.reg-field
-{
-	padding: 10px;
-	width: 80%;
-    background-color:#00938A;
-    color: #00FF26;
-	font-family: 'Arvo', serif;
-	margin: 10px;
-    border: none;
-    
-}
-#REG_button
-{
-	padding: 10px;
-	border: none;
-	background-color: #00938A;
-	font-family: 'Arvo', serif;
-    color: #00FF26;	
-	cursor: pointer;
-	margin-top: 20px;
-	transition: 0.2s ease-in;
-
-}
-#REG_button:hover
-{
-	transition: 0.2s ease-in;
-	padding: 15px;
-	margin-top: 20px;
-}
 @media only screen and (max-width: 1028px){
 
     .dropdown-1 li>a

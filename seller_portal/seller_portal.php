@@ -23,9 +23,9 @@
             <li><a class="inactive" href=""><i class="fas fa-user"></i>&nbsp <?php echo " " . $username ?> &nbsp <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-1">
                     <li><a href="">My Wallet</a></li>
-                    <li><a href="">Change My Details</a></li>
-                    <li><a href="">Change Password</a></li>
-                    <li><a href="">Logout</a></li>
+                    <li><a href="../change_details.php">Change My Details</a></li>
+                    <li><a href="../change_password.php">Change Password</a></li>
+                    <li><a href="../logout.php">Logout</a></li>
                 </ul>
             </li>
         </ul>

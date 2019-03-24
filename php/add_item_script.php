@@ -18,7 +18,7 @@
         }
         else
         {
-            $message="Error,Cannot input item";
+            $message="Error,Cannot input item".mysqli_error($link);
 
         }
     }
