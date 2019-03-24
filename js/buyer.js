@@ -76,3 +76,14 @@ function load_fruit() {
     banner.style.opacity = 1;
     },500);
 }
+
+function submit_form(arg)
+{
+    console.log('form');
+    let form_sub = document.getElementById('item-form');
+    let value_item = document.getElementById('item-type');
+    console.log(value_item);
+    value_item.value=arg;
+
+    form_sub.submit();
+}

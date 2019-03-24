@@ -239,6 +239,7 @@ input[type=number]::-webkit-inner-spin-button {
     color: #386C5F;
     cursor: pointer;
     z-index: 3;
+    background:#F9F9F9;
     border: 2px solid #00FF41;
     border-radius: 80px;
 }
@@ -323,7 +324,12 @@ input[type=number]::-webkit-inner-spin-button {
     animation: fadeIn2 1s ease-in;
 }
 
-
+.form-wrapper
+{
+    height: 91%;
+    width: 100%;
+    /* background: red; */
+}
 @media only screen and (max-width: 1028px){
 
     .dropdown-1 li>a

@@ -58,7 +58,7 @@ img
 	 flex-grow: 1;
 	 align-items: center;
  	 justify-content: center;
-	 /* border-right: 2px solid #00FF41; */
+	 border-right: 2px solid #00FF41;
 	 transition: background-color 500ms;
 }
 .navbar-container>li:hover{
@@ -70,7 +70,7 @@ img
 	 flex-grow: 1;
 	 align-items: center;
  	 justify-content: center;
-	 /* border-right: 2px solid #00FF41; */
+	 border-right: 2px solid #00FF41;
 }
 
 .navbar-container li a{
@@ -310,7 +310,8 @@ img
 {
     display: table;
     width: 100%;
-    height: 5%;
+	height: 8%;
+    background: #9CB0A4;	
     position: relative;
     text-align: center;
     font-family: 'Arvo', serif;
@@ -320,9 +321,10 @@ p
 {
     display: table-cell;
     position: relative;
-    top: 50%;
+	top: 50%;
+	text-transform: capitalize;
     color: #386C5F;
     transition: opacity .5s ease-in-out;
     vertical-align: center;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }

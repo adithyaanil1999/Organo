@@ -61,7 +61,7 @@
             <div class="text"><?php echo $row['purchased_weight'] ?></div>
             <div class="btn-wrapper">
                 <form class="form-wrapper" method="POST">
-                    <button class="remove-btn" name="button" type="submit" value="<?php echo $row['product_id'] ?>">Confirm</i></button>
+                    <button class="remove-btn" name="button" type="submit" value="<?php echo $row['product_id'] ?>">Confirm</button>
                 </form>
             </div>
         </div>

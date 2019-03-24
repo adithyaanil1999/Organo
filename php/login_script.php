@@ -38,6 +38,6 @@
             die('Error:'.mysqli_error($link));
         }
     }
-
+    $_POST=array();
     mysqli_close($link);
 ?>

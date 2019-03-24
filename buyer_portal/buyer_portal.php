@@ -1,19 +1,27 @@
 <?php
-session_start();
-if(isset($_SESSION['username']) && $_SESSION['username']!=='GUEST')
-{
-    $username = $_SESSION['username'];
-    
-}
-else
-{
-    $_SESSION['username'] = "GUEST";
-    $username = $_SESSION['username'];
-    echo "<script src='../js/buyer.js'> </script>";
-    echo "<script> var guest_session=true;</script>";
-}   
+    session_start();
+    unset($_SESSION['msg']);
+    if(isset($_SESSION['username']) && $_SESSION['username']!=='GUEST')
+    {
+        $username = $_SESSION['username'];
+        
+    }
+    else
+    {
+        $_SESSION['username'] = "GUEST";
+        $username = $_SESSION['username'];
+        echo "<script src='../js/buyer.js'> </script>";
+        echo "<script> var guest_session=true;</script>";
+    }   
+    $query = http_build_query($_GET);
+    // echo $query;
+    if ($query!="")
+    {
+        header('location: searchitem.php'."?".$query);
+        $_GET=array();
 
-   
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,114 +54,118 @@ else
         <div class="Choice-banner" >
             <p id="top-banner">What would you like to Buy?<p>
         </div>
-        <div class="Choice-containter" id="choice-wrapper">
-            <div class="Choice Fruit">
-                <div class="pic" onclick="load_fruit()">
-                    <img src="../img/fruit_trans.png">
+        <form id="item-form" class="form-wrapper" method="GET">
+            <div class="Choice-containter" id="choice-wrapper">
+                <div class="Choice Fruit">
+                    <div class="pic" onclick="load_fruit()">
+                        <img src="../img/fruit_trans.png">
+                    </div>
+                    <div class="about_pic">
+                        <p>Fruit</p>
+                    </div>
                 </div>
-                <div class="about_pic">
-                    <p>Fruit</p>
+                <div class="Choice Vegetable">
+                    <div class="pic" onclick="load_veg()">
+                        <img src="../img/vegt.png">
+                    </div>
+                    <div class="about_pic">
+                        <p>Vegetable</p>
+                    </div>
                 </div>
             </div>
-            <div class="Choice Vegetable">
-                <div class="pic" onclick="load_veg()">
-                    <img src="../img/vegt.png">
-                </div>
-                <div class="about_pic">
-                    <p>Vegetable</p>
+        
+            <div class="Fruit-container" id="fruit-wrapper">
+                <div class="items">
+                    <div class="item">
+                        <div class='item-pic' onclick="submit_form('guava')">
+                            <img src="../img/guava.png">
+                        </div>
+                        <div class='item-desc'>
+                            Guava
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class='item-pic' onclick="submit_form('pomegranate')">
+                            <img src="../img/pomegranate.png">
+                        </div>
+                        <div class='item-desc'>
+                            Pomegranate
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class='item-pic' onclick="submit_form('banana')">
+                            <img src="../img/banana.png">
+                        </div>
+                        <div class='item-desc'>
+                            Banana
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class='item-pic' onclick="submit_form('pineapple')">
+                            <img src="../img/pineapple.png">
+                        </div>
+                        <div class='item-desc'>
+                            Pineapple
+                        </div>
+                    </div>
+                    <div class="item" onclick="submit_form('apple')">
+                        <div class='item-pic'>
+                            <img src="../img/apple.png">
+                        </div>
+                        <div class='item-desc'>
+                            Apple
+                        </div>
+                    </div>
+                    <div class="back-btn" onclick="back('fruit','none')">back</div>
                 </div>
             </div>
-        </div>
-        <div class="Fruit-container" id="fruit-wrapper">
+            <div class="Veg-container" id="veg-wrapper">
             <div class="items">
                 <div class="item">
-                    <div class='item-pic' onclick="">
-                        <img src="../img/guava.png">
+                        <div class='item-pic' onclick="submit_form('cabbage')">
+                            <img src="../img/cabbage.png">
+                        </div>
+                        <div class='item-desc'>
+                            Cabbage
+                        </div>
                     </div>
-                    <div class='item-desc'>
-                        Guava
+                    <div class="item">
+                        <div class='item-pic' onclick="submit_form('carrot')">
+                            <img src="../img/carrot.png">
+                        </div>
+                        <div class='item-desc'>
+                            Carrot
+                        </div>
                     </div>
+                    <div class="item">
+                        <div class='item-pic' onclick="submit_form('radish')">
+                            <img src="../img/radish.png">
+                        </div>
+                        <div class='item-desc'>
+                            Radish
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class='item-pic' onclick="submit_form('beans')">
+                            <img src="../img/beans.png">
+                        </div>
+                        <div class='item-desc'>
+                            Beans
+                        </div>
+                    </div>
+                    <div class="item" onclick="submit_form('tomato')">
+                        <div class='item-pic'>
+                            <img src="../img/tomato.png">
+                        </div>
+                        <div class='item-desc'>
+                            Tomato
+                        </div>
+                    </div>
+                    <div class="back-btn" onclick="back('veg','none')">back</div>
                 </div>
-                <div class="item">
-                    <div class='item-pic' onclick="">
-                        <img src="../img/pomegranate.png">
-                    </div>
-                    <div class='item-desc'>
-                        Pomegranate
-                    </div>
-                </div>
-                <div class="item">
-                    <div class='item-pic' onclick="">
-                        <img src="../img/banana.png">
-                    </div>
-                    <div class='item-desc'>
-                        Banana
-                    </div>
-                </div>
-                <div class="item">
-                    <div class='item-pic' onclick="">
-                        <img src="../img/pineapple.png">
-                    </div>
-                    <div class='item-desc'>
-                        Pineapple
-                    </div>
-                </div>
-                <div class="item" onclick="">
-                    <div class='item-pic'>
-                        <img src="../img/apple.png">
-                    </div>
-                    <div class='item-desc'>
-                        Apple
-                    </div>
-                </div>
-                <button class="back-btn" onclick="back('fruit','none')">back</button>
+                <input id="item-type" name="item" type="hidden">
             </div>
-        </div>
-        <div class="Veg-container" id="veg-wrapper">
-        <div class="items">
-            <div class="item">
-                    <div class='item-pic' onclick="">
-                        <img src="../img/cabbage.png">
-                    </div>
-                    <div class='item-desc'>
-                        Cabbage
-                    </div>
-                </div>
-                <div class="item">
-                    <div class='item-pic' onclick="">
-                        <img src="../img/carrot.png">
-                    </div>
-                    <div class='item-desc'>
-                        Carrot
-                    </div>
-                </div>
-                <div class="item">
-                    <div class='item-pic' onclick="">
-                        <img src="../img/radish.png">
-                    </div>
-                    <div class='item-desc'>
-                        Radish
-                    </div>
-                </div>
-                <div class="item">
-                    <div class='item-pic' onclick="">
-                        <img src="../img/beans.png">
-                    </div>
-                    <div class='item-desc'>
-                        Beans
-                    </div>
-                </div>
-                <div class="item" onclick="">
-                    <div class='item-pic'>
-                        <img src="../img/tomato.png">
-                    </div>
-                    <div class='item-desc'>
-                        Tomato
-                    </div>
-                </div>
-                <button class="back-btn" onclick="back('veg','none')">back</button>
-            </div>
-        </div>
+        </form>
     </div>
 </body>
 <script>
