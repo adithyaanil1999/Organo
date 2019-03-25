@@ -2,7 +2,7 @@
     $item_type = $_GET['item'];
     session_start();
     include('../php/config.php');
-    $query = "SELECT product_id,product_user,(product_weight-purchased_weight) AS weight,user_state,user_district,product_pricePkg from product JOIN user_table on product.product_user=user_table.login_id where product_type='$item_type';";
+    $query = "SELECT product_id,product_user,product_weight AS weight,user_state,user_district,product_pricePkg from product JOIN user_table on product.product_user=user_table.login_id where product_type='$item_type' AND product.product_weight>0;";
     $result = mysqli_query($link, $query);
     if (!$result) 
     {
