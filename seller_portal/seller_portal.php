@@ -1,6 +1,13 @@
 <?php
     session_start();
+    include('../php/config.php');
     $username = $_SESSION['username'];
+    $query ="SELECT wallet_amount from user_table where login_id='$username';";
+    $result = mysqli_query($link, $query);
+    $row=mysqli_fetch_assoc($result);
+    $_SESSION['wallet']=$row['wallet_amount'];
+    
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +28,7 @@
             <li><a href="my_items.php"><i class="fas fa-carrot"></i>&nbsp My Items</a></li>
             <li><a class="inactive" href=""><i class="fas fa-user"></i>&nbsp <?php echo " " . $username ?> &nbsp <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-1">
-                    <li><a href="">My Wallet</a></li>
+                    <li><a href="withdraw.php">My Wallet:&nbsp₹<?php echo $_SESSION['wallet'] ?></a></li>
                     <li><a href="../change_details.php">Change My Details</a></li>
                     <li><a href="../change_password.php">Change Password</a></li>
                     <li><a href="../logout.php">Logout</a></li>

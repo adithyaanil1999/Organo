@@ -1,8 +1,5 @@
 <?php
     session_start();
-    // echo $_SESSION['weight-item'];
-    //echo $_SESSION['product-order'];
-    // echo $_SESSION['total-amount'];
     $pid=$_SESSION['product-order-id'];
     $username=$_SESSION['username'];
     include('../php/config.php');
