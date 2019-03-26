@@ -80,8 +80,6 @@ function back(arg,arg1) {
 }
 
 function input_item(arg1,arg2){
-    var suggestamount=20; //placeholder
-    let suggestedamount = document.getElementById('suggested-price');
     let fruit_container = document.getElementById('fruit-wrapper');
     let veg_container = document.getElementById('veg-wrapper');
     let item_price = document.getElementById('item_price');
@@ -90,12 +88,6 @@ function input_item(arg1,arg2){
     let item_type = document.getElementById('item-type');
 
     item_type.value=arg1;
-    price_feild.addEventListener('keydown',()=>{
-
-        suggestedamount.innerHTML=`Suggested Price= ${suggestamount}`;
-
-    })
-
     if(arg2==='fruit')
     {
         fruit_container.style.display='none';
